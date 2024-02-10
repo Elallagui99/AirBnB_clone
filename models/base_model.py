@@ -50,6 +50,7 @@ class BaseModel:
         """ delete the current instance from the storage """
         models.storage.delete(self)
 
+
 if __name__ == "__main__":
     my_model = BaseModel()
     my_model.name = "First Model"

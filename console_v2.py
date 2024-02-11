@@ -16,7 +16,8 @@ class HBNBCommand(cmd.Cmd):
     """
 
     """
-    models = ["BaseModel", "User", "City", "Place", "Review", "State","Amenity"]
+    models = ["BaseModel", "User", "City",
+              "Place", "Review", "State", "Amenity"]
     prompt = "(hbnb)"
 
     def do_create(self, arg):
@@ -25,7 +26,7 @@ class HBNBCommand(cmd.Cmd):
 
         if len(model) < 1:
             print("** class name missing **")
-            return
+            return False
 
         if model[0] in self.models:
             cls = eval(model[0])

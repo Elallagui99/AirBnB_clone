@@ -5,6 +5,12 @@
 import json
 import os
 from models.base_model import BaseModel
+from models.user import User
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
 
 
 class FileStorage:
@@ -13,10 +19,6 @@ class FileStorage:
     """
     __file_path = "file.json"
     __objects = {}
-
-    def all(self):
-        """ returns the dictionary __objects"""
-        return FileStorage.__objects
 
     def new(self, obj):
         """sets in __objects the obj with key <obj class name>.id"""
@@ -45,3 +47,7 @@ class FileStorage:
                     FileStorage.__objects[key] = obj
             except Exception:
                 pass
+
+    def all(self):
+        """ returns the dictionary __objects"""
+        return FileStorage.__objects

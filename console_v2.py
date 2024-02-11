@@ -2,6 +2,12 @@ import cmd
 import shlex
 from models import storage
 from models.base_model import BaseModel
+from models.user import User
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
 """
 """
 
@@ -10,7 +16,7 @@ class HBNBCommand(cmd.Cmd):
     """
 
     """
-    models = ["BaseModel"]
+    models = ["BaseModel", "User", "City", "Place", "Review", "State","Amenity"]
     prompt = "(hbnb)"
 
     def do_create(self, arg):

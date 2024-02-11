@@ -19,7 +19,7 @@ classes = {"BaseModel": BaseModel, "User": User, "Amenity": Amenity,
 
 class HBNBCommand(cmd.Cmd):
     """ Class for the console """
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
 
     def do_EOF(self, arg):
         """ Exit console """
@@ -29,9 +29,9 @@ class HBNBCommand(cmd.Cmd):
         """ overwriting te emptyline """
         return False
 
-    def do_quit(self):
+    def do_quit(self, arg):
         """ quit cmd to exit program """
-        return False
+        return True
 
     def key_value_parser(self, args):
         """ create a dictionary from a list of strings """

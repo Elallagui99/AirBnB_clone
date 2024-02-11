@@ -8,14 +8,11 @@ from models.city import City
 from models.place import Place
 from models.review import Review
 from models.state import State
-"""
-"""
+""" the console """
 
 
 class HBNBCommand(cmd.Cmd):
-    """
-
-    """
+    """ Class for the console """
     models = ["BaseModel", "User", "City",
               "Place", "Review", "State", "Amenity"]
     prompt = "(hbnb)"
@@ -37,8 +34,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_show(self, arg):
-        """ 
-        Prints the string representation of an instance based on 
+        """
+        Prints the string representation of an instance based on
         the class name and id
         """
         args = shlex.split(arg)
@@ -61,7 +58,7 @@ class HBNBCommand(cmd.Cmd):
     def do_destroy(self, arg):
         """
         Deletes an instance based on the class
-        name and id (save the change into the JSON file). 
+        name and id (save the change into the JSON file).
         """
         args = shlex.split(arg)
         if len(args) == 0:
@@ -82,7 +79,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         """
-        Prints all string representation of all instances 
+        Prints all string representation of all instances
         based or not on the class name.
         """
         objs = storage.all()
@@ -138,11 +135,6 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, arg):
         """ Quit the app"""
         return True
-
-    def help_quit(self, arg):
-        """
-        """
-        print()
 
     def do_EOF(self, arg):
         """Quit the app with ctrl D"""

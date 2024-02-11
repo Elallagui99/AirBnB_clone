@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """
+contains class Place
 """
 from models.base_model import BaseModel
 
 
 class Place(BaseModel):
     """
+    Place Class
     """
     city_id = ''
     user_id = ''

@@ -50,14 +50,3 @@ class BaseModel:
     def delete(self):
         """ delete the current instance from the storage """
         models.storage.delete(self)
-
-
-if __name__ == "__main__":
-    my_model = BaseModel()
-    my_model.name = "First Model"
-    my_model.my_number = 66
-    print(my_model)
-    my_model.save()
-    print(my_model)
-    my_model_json = my_model.to_dict()
-    print(my_model_json)

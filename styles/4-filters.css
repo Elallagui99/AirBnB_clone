@@ -16,7 +16,7 @@ button{
     width: 20%;
     border-radius: 4px;
     border: none;
-    margin-left: 30px;
+    float: right;
     transition: 0.5s;
 }
 
